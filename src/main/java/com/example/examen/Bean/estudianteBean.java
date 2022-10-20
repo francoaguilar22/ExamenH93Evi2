@@ -51,7 +51,7 @@ public class estudianteBean {
     }
 
     public String getApellipaterno() {
-        return ;
+        return apellipaterno;
     }
 
     public void setApellipaterno(String apellipaterno) {
