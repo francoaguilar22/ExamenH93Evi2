@@ -17,7 +17,7 @@ public class UsuarioServicesImpl implements UsuarioServices {
     private UsuarioRepository userRepo;
 
     @Autowired
-    private RolRepository rolRepoa;
+    private RolRepository rolRepo;
 
     @Override
     public UsuariosEntity guardarUsuarioService(UsuariosEntity usuariosJson, Set<UsuarioRolEntity> usuarioRolController) throws Exception {

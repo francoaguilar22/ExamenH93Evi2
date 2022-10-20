@@ -32,7 +32,7 @@ public class UsuarioRolEntity {
     }
 
     public RolEntity getRolusario() {
-        return rolusari;
+        return rolusario;
     }
 
     public void setRolusario(RolEntity rolusario) {
