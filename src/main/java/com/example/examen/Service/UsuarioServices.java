@@ -10,7 +10,7 @@ public interface UsuarioServices {
 
     public UsuariosEntity guardarUsuarioService (UsuariosEntity usuariosEntity, Set<UsuarioRolEntity> usuarioRolEntity) throws Exception;
 
-    public UsuariosEntity obtenerUsuarioService (String username);
+    public UsuariosEntity obtenerUsuarioService (String );
 
     public void eliminarUsuarioService (int idusurios);
 
