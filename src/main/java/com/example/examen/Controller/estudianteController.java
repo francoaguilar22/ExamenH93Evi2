@@ -21,13 +21,13 @@ public class estudianteController {
     @GetMapping("/obtener")
     public List<estudianteBean> obtenerEstudiante (){
         List<estudianteBean> listaEstudiante = new ArrayList<>();
-        listaEstudiante = (List<>) estuRepo.findAll();
+        listaEstudiante = (List<estudianteBean>) estuRepo.findAll();
         return listaEstudiante;
     }
 
     @PostMapping("/insertar")
     public void insertarEstudiante(@RequestBody estudianteBean estuBean){
-        estuRepo.save(estuBean);
+        estuRepo.save();
     }
 
     @PutMapping("/modificar")
