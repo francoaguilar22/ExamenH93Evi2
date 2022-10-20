@@ -14,6 +14,6 @@ public class AutenticacionPoint implements AuthenticationEntryPoint {
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        response.sendError(HttpServletResponse., "Token no Autorizado");
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "Token no Autorizado");
     }
 }

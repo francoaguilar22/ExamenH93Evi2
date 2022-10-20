@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class matriculaBean {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.)
     private Integer idmatricula;
 
     private Integer idestudiante;
