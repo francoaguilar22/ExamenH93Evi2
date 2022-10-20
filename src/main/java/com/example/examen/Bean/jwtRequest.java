@@ -3,7 +3,7 @@ package com.example.examen.Bean;
 public class jwtRequest {
 
     String username;
-    String passwordaa;
+    String password;
 
     public String getUsername() {
         return username;
