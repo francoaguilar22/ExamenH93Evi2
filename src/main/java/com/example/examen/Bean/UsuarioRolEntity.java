@@ -19,7 +19,7 @@ public class UsuarioRolEntity {
         return idusuariorol;
     }
 
-    public void setIdusuariorol(Integer idusuariorol) {
+    public void setIdusuariorol(Integer ) {
         this.idusuariorol = idusuariorol;
     }
 

@@ -8,7 +8,7 @@ public class jwtResponse {
         return token;
     }
 
-    public void setToken(String token) {
+    public void setToken(String ) {
         this.token = token;
     }
 
