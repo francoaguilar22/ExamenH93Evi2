@@ -27,7 +27,7 @@ public class cursosCrontoller {
 
     @PutMapping("/modificar")
     public void modificarcurso(@RequestBody cursosBean curBean) {
-        curRepo.save(curBean);
+        curRepo.save();
     }
 
     @DeleteMapping (value = "/{idRecibido}")

@@ -23,7 +23,7 @@ public class RolEntity {
     }
 
     public void setIdrol(Integer idrol) {
-        this.idrol = idrol;
+        this.idrol = ;
     }
 
     public String getNombrol() {
