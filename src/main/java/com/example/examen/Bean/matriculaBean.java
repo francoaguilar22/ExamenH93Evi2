@@ -12,7 +12,7 @@ public class matriculaBean {
 
     private Integer idestudiante;
 
-    private Integer ;
+    private Integer idcursos;
 
     public Integer getIdmatricula() {
         return idmatricula;
