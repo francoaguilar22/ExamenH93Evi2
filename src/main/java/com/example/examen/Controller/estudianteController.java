@@ -21,7 +21,7 @@ public class estudianteController {
     @GetMapping("/obtener")
     public List<estudianteBean> obtenerEstudiante (){
         List<estudianteBean> listaEstudiante = new ArrayList<>();
-        listaEstudiante = (List<estudianteBean>) estuRepo.findAll();
+        listaEstudiante = (List<>) estuRepo.findAll();
         return listaEstudiante;
     }
 
@@ -32,7 +32,7 @@ public class estudianteController {
 
     @PutMapping("/modificar")
     public void modificarAlumno (@RequestBody estudianteBean estuBean) {
-        estuRepo.save();
+        estuRepo.save(estuBean);
     }
 
     @DeleteMapping("/eliminar")
