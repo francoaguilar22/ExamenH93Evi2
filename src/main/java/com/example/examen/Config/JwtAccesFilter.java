@@ -64,12 +64,12 @@ public class JwtAccesFilter extends WebSecurityConfigurerAdapter {
                 .disable()
                 .authorizeHttpRequests()
                 .antMatchers("/autenticacion/generartoken","/usuario/registrarUsuario").permitAll()
-                .antMatchers(HttpMethod.).permitAll()
+                .antMatchers(HttpMethod.OPTIONS).permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .exceptionHandling().authenticationEntryPoint(autenticacionPoint)
                 .and()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.);
 
         http.addFilterBefore((Filter) autenticacionFilter, UsernamePasswordAuthenticationFilter.class);
     }
