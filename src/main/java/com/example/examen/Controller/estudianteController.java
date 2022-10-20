@@ -27,7 +27,7 @@ public class estudianteController {
 
     @PostMapping("/insertar")
     public void insertarEstudiante(@RequestBody estudianteBean estuBean){
-        estuRepo.save();
+        estuRepo.save(estuBean);
     }
 
     @PutMapping("/modificar")
