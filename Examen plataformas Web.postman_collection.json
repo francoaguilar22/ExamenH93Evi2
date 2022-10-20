@@ -1,0 +1,412 @@
+{
+	"info": {
+		"_postman_id": "aba6b08d-03a4-431d-93ad-860fb927e4c4",
+		"name": "Examen plataformas Web",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13757464"
+	},
+	"item": [
+		{
+			"name": "GenerarToken",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"egarcia2021\",\r\n    \"password\": \"ATENTO2019\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ApiRest/autenticacion/generartoken",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"autenticacion",
+						"generartoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ApiRest/usuario/egarcia2021",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"usuario",
+						"egarcia2021"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "registrarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idusurios\": 3,\r\n    \"username\": \"EXAMEN2022\",\r\n    \"password\": \"EXAMEN2022-1\",\r\n    \"nombuser\": \"JEAN\",\r\n    \"apelliuser\": \"EGUSQUIZA\",\r\n    \"emailuser\": \"EGUSQUIZA@GMAIL.COM\",\r\n    \"telefuser\": \"921883419\",\r\n    \"perfiluser\": \"admin\",\r\n    \"enable\": true,\r\n    \"enabled\": true,\r\n    \"authorities\": [],\r\n    \"accountNonLocked\": true,\r\n    \"credentialsNonExpired\": true,\r\n    \"accountNonExpired\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ApiRest/usuario/registrarUsuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"usuario",
+						"registrarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerEstudiante",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ApiRest/estudiante/obtener",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"estudiante",
+						"obtener"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertarEstudiante",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"idestudiante\": 2,\r\n        \"nombestudiante\": \"Gustavo\",\r\n        \"apellipaterno\": \"egusquiza\",\r\n        \"apellimaterno\": \"garcia\",\r\n        \"edad\": 21,\r\n        \"fechanacimiento\": \"1999-07-16T05:00:00.000+00:00\",\r\n        \"estado\": true,\r\n        \"dni\": \"73246935\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ApiRest/estudiante/insertar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"estudiante",
+						"insertar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarEstudiante",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"idestudiante\": 2,\r\n        \"nombestudiante\": \"Gustavo\",\r\n        \"apellipaterno\": \"egusquiza\",\r\n        \"apellimaterno\": \"garcia\",\r\n        \"edad\": 22,\r\n        \"fechanacimiento\": \"1999-07-16T05:00:00.000+00:00\",\r\n        \"estado\": true,\r\n        \"dni\": \"73246935\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ApiRest/estudiante/modificar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"estudiante",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarEstudiante",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n    {\r\n        \"idestudiante\": 3,\r\n        \"nombestudiante\": \"Gustavo\",\r\n        \"apellipaterno\": \"egusquiza\",\r\n        \"apellimaterno\": \"garcia\",\r\n        \"edad\": 21,\r\n        \"fechanacimiento\": \"1999-07-16T05:00:00.000+00:00\",\r\n        \"estado\": true,\r\n        \"dni\": \"73246935\"\r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ApiRest/estudiante/eliminar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"estudiante",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerCurso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ApiRest/cursos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertarCurso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n        \"idcursos\": 3,\r\n        \"nombcurso\": \"Base de datos -para eliminar\",\r\n        \"ciclo\": 4,\r\n        \"creditos\":20\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ApiRest/cursos",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"cursos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "modificarcurso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\r\n        \"idcursos\": 1,\r\n        \"nombcurso\": \"Diseño Web - modificado\",\r\n        \"ciclo\": 4,\r\n        \"creditos\": 10\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ApiRest/cursos/modificar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"cursos",
+						"modificar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarCurso",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ApiRest/cursos/3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"cursos",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerUsuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlZ2FyY2lhMjAyMSIsImV4cCI6MTY2NjI2OTMzNCwiaWF0IjoxNjY2MjMzMzM0fQ.2ZeVLv36ZpvNtqX_fIWBeP36B4cXqeASzR2bsp3HdKs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ApiRest/autenticacion/userloggin/egarcia2021",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ApiRest",
+						"autenticacion",
+						"userloggin",
+						"egarcia2021"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
