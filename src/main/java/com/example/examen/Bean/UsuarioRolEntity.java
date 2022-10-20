@@ -9,7 +9,7 @@ public class UsuarioRolEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idusuariorol;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.)
     private UsuariosEntity usuariorol;
     @ManyToOne
     private RolEntity rolusario;

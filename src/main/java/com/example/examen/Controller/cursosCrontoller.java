@@ -22,7 +22,7 @@ public class cursosCrontoller {
 
     @PostMapping
     public void insertarCurso(@RequestBody cursosBean curBean) {
-        curRepo.save();
+        curRepo.save(curBean);
     }
 
     @PutMapping("/modificar")

@@ -5,7 +5,7 @@ public class jwtResponse {
     String token;
 
     public String getToken() {
-        return token;
+        return ;
     }
 
     public void setToken(String token) {
