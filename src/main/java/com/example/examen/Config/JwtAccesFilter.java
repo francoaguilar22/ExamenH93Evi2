@@ -71,7 +71,7 @@ public class JwtAccesFilter extends WebSecurityConfigurerAdapter {
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
-        http.addFilterBefore((Filter) autenticacionFilter, UsernamePasswordAuthenticationFilter.class);
+        http.addFilterBefore((Filter) autenticacionFilter, UsernamePasswordAuthenticationFilter);
     }
 
 }

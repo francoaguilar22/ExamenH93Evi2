@@ -36,7 +36,7 @@ public class estudianteController {
     }
 
     @DeleteMapping("/eliminar")
-    public void eliminar (@RequestBody estudianteBean estuBean){
+    public void eliminar (@RequestBody estudianteBean ){
         estuRepo.deleteById(estuBean.getIdestudiante());
     }
 

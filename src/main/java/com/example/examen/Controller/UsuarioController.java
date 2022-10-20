@@ -22,7 +22,7 @@ public class UsuarioController {
     public UsuariosEntity obtenerUsuario (@PathVariable("username") String username){
         UsuariosEntity userlocal = new UsuariosEntity();
         userlocal = userService.obtenerUsuarioService(username);
-
+        return userlocal;
     }
 
 
