@@ -1,0 +1,126 @@
+{
+	"info": {
+		"_postman_id": "bbf5aa5d-338f-4cbe-8b18-deba8606d20e",
+		"name": "ExamenH93-AA2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22677987"
+	},
+	"item": [
+		{
+			"name": "Generar Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"alearies\",\r\n    \"password\": \"0123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/apiRest/autenticacion/generartoken",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"apiRest",
+						"autenticacion",
+						"generartoken"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"alearies\",\r\n    \"password\": \"0123456\",\r\n    \"nombuser\": \"Alejandra\",\r\n    \"apelliuser\": \"Torres\",\r\n    \"emailuser\": \"esteban@gmail.com\",\r\n    \"telefuser\": 987654321,\r\n    \"perfiluser\": \"Cliente\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/apiRest/usuario/registrarUsuario",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"apiRest",
+						"usuario",
+						"registrarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Curso",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idcursos\": 10,\r\n    \"nombcurso\": \"Algoritmos\",\r\n    \"ciclo\": 4,\r\n    \"creditos\": 30\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/apiRest/cursos/insertar",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"apiRest",
+						"cursos",
+						"insertar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Estudiante",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"DNI\": \"70335527\",\r\n    \"nombestudiante\": \"Alberto\",\r\n    \"apellipaterno\": \"Soto\",\r\n    \"apellimaterno\": \"Torres\",\r\n    \"edad\": 18,\r\n    \"fechanacimiento\": \"2004-02-12\",\r\n    \"estado\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/apiRest/estudiante/insertar",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"apiRest",
+						"estudiante",
+						"insertar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
