@@ -15,12 +15,12 @@ public class cursosCrontoller {
     private cursoRepository curRepo;
 
 
-    @GetMapping
+    @GetMapping("/obtener")
     public List<cursosBean> obtenerCurso() {
         return (List<cursosBean>) curRepo.findAll();
     }
 
-    @PostMapping
+    @PostMapping("/insertar")
     public void insertarCurso(@RequestBody cursosBean curBean) {
         curRepo.save(curBean);
     }
