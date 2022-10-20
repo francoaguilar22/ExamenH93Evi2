@@ -29,7 +29,7 @@ public class JwtUtilies {
         return claimsResolver.apply(claims);
     }
     private Claims extractAllClaims(String token) {
-        return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
+        return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws().getBody();
     }
 
     private Boolean isTokenExpired(String token) {

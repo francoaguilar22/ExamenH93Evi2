@@ -34,7 +34,7 @@ public class AutenticacionFilter extends OncePerRequestFilter {
         if (headerToken != null && headerToken.startsWith("Bearer")){
             tokenjwt = headerToken.substring(7);
             try {
-                username  = this.jwtUtilies.extractUsername(tokenjwt);
+                username  = this.jwtUtilies.extractUsername();
             }catch (Exception e){
                 e.printStackTrace();
             }

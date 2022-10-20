@@ -31,7 +31,7 @@ public class RolEntity {
     }
 
     public void setNombrol(String nombrol) {
-        this.nombrol = ;
+        this.nombrol = nombrol;
     }
 
     public Set<UsuarioRolEntity> getRolusuarioentity() {
