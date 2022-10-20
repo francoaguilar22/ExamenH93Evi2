@@ -14,7 +14,7 @@ public class jwtRequest {
     }
 
     public String getPassword() {
-        return ;
+        return password;
     }
 
     public void setPassword(String password) {
