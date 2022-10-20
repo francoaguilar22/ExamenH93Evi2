@@ -12,6 +12,6 @@ public interface UsuarioServices {
 
     public UsuariosEntity obtenerUsuarioService (String username);
 
-    public void eliminarUsuarioService (int idusurios);
+    public void eliminarUsuarioService (int idusuriosa);
 
 }
