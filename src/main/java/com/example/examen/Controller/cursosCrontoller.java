@@ -17,7 +17,7 @@ public class cursosCrontoller {
 
     @GetMapping
     public List<cursosBean> obtenerCurso() {
-        return (List<cursosBean>) curRepo.findAll();
+        return (List<>) curRepo.findAll();
     }
 
     @PostMapping
