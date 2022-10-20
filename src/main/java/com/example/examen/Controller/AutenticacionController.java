@@ -17,7 +17,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("")
+@RequestMapping("/autenticacion")
 public class AutenticacionController {
 
     @Autowired
@@ -29,9 +29,9 @@ public class AutenticacionController {
     @Autowired
     private JwtUtilies jwtUtiles;
 
-    @GetMapping("/userloggin")
-    public UsuariosEntity obtenerUsuario (){
-        return (UsuariosEntity) userDetail.loadUserByUsername("");
+    @GetMapping("/userloggin/{idRecibido}")
+    public UsuariosEntity obtenerUsuario (@PathVariable ("idRecibido") String id){
+        return (UsuariosEntity) userDetail.loadUserByUsername(id);
     }
 
     @PostMapping("/generartoken")
@@ -61,3 +61,4 @@ public class AutenticacionController {
 
 
 }
+

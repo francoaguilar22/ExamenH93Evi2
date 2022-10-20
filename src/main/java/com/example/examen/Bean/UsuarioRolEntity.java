@@ -2,6 +2,7 @@ package com.example.examen.Bean;
 
 import javax.persistence.*;
 
+
 @Entity
 @Table(name = "userrol")
 public class UsuarioRolEntity {

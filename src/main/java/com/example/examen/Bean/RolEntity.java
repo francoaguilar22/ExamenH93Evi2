@@ -3,7 +3,6 @@ package com.example.examen.Bean;
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
-
 @Entity
 @Table(name = "rol")
 public class RolEntity {
@@ -14,7 +13,7 @@ public class RolEntity {
 
     private String nombrol;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,mappedBy = "rol")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,mappedBy = "rolusario")
     private Set<UsuarioRolEntity> rolusuarioentity = new HashSet<>();
 
 
