@@ -32,7 +32,7 @@ public class estudianteController {
 
     @PutMapping("/modificar")
     public void modificarAlumno (@RequestBody estudianteBean estuBean) {
-        estuRepo.save(estuBean);
+        estuRepo.save();
     }
 
     @DeleteMapping("/eliminar")
